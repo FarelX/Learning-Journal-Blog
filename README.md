@@ -12,7 +12,7 @@ This project is a responsive blog created to serve as a learning journal. It's a
 
 ## 📸 Preview
 
-!(images/ss.png) 
+!(ss.png) 
 
 ## 🔥 Highlights
 
