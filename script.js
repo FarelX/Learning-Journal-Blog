@@ -1,7 +1,9 @@
-document
-  .querySelector(".hero-section")
-  ?.addEventListener("click", function (e) {
-    // jika pengguna klik link internal, jangan override
-    if (e.target.closest("a")) return;
+const copy = document.getElementById("copy");
+const currentYear = new Date().getFullYear();
+copy.textContent = `copyright © ${currentYear}`;
+
+document.addEventListener("click", (e) => {
+  if (e.target.closest("#hero")) {
     window.location.href = "post.html";
-  });
+  }
+});

@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Learning Journal</title>
+    <title>Learning Journal | Post</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -11,130 +11,133 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
-    <header class="site-header">
-      <div class="header-logo">
-        <img src="images/reading-book.png" alt="Reading Book Logo" />
-        <h1 class="header-title">My learning journal</h1>
-      </div>
-
+    <header>
+      <img src="images/logo.png" alt="logo" class="logo" />
+      <a href="/" class="site-title">My learning journal</a>
       <nav>
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About Me</a></li>
+        <ul>
+          <li><a href="/">HOME</a></li>
+          <li><a href="about.html">ABOUT ME</a></li>
         </ul>
       </nav>
     </header>
     <main>
-      <section class="post-section">
-        <article class="post-article">
-          <span class="date">September 06, 2025</span>
-          <h2>My new journey as a bootcamp student.</h2>
-          <p>
-            After several months of learning in the Fullstack Developer Career
-            Path, I've made the big jump over to the Bootcamp to get expert code
-            reviews of my Solo Projects projects and meet like-minded peers.
-          </p>
-          <img src="images/article-image.png" alt="" class="post-image" />
-          <h3 class="post-highlight">How I stay committed to learning</h3>
-          <p>
-            I like to think of myself as a lifelong learner. I used to spend
-            hours and hours learning, then try to create simple projects using
-            what I learned or work new techniques into existing projects.
-          </p>
-          <br />
-          <p>
-            While that was fun, I felt like it would be helpful to share what I
-            was learning and most things about my journey with the world.
-          </p>
-          <h3 class="post-highlight">How I got started</h3>
-          <p>
-            I started simple and gradually grew my learning jo urnal site. I
-            would take notes about what I was learning. After each learning
-            session, I'd use my notes to not only reflect on what I learned but
-            also write short summaries of what I learned using my own words.
-          </p>
-          <br />
-          <p>
-            That helped me grok what I was learning, and I realized that posting
-            my learning summaries was also helping others learn and stay
-            motivated.
-          </p>
-        </article>
+      <section class="hero-post">
+        <span class="date">MARCH 09, 2026</span>
+        <h1>My new journey as a Scrimba student.</h1>
+        <p>
+          After several months of learning in the Fullstack Developer Career
+          Path, I made this learning journal to documents my journey,
+          experiences, and the projects I build along the way.
+        </p>
+        <img
+          src="images/article-image.png"
+          alt="laptop with study lamp and evening view from the window"
+          class="article-image"
+        />
+        <h2>How I stay committed to learning</h2>
+        <p class="p-margin">
+          As a software developer, I understand the importance of continuous
+          learning and staying up-to-date with the latest technologies and
+          trends in the industry. However, I also know how challenging it can be
+          to stay committed to learning, especially when juggling work and
+          personal life.
+        </p>
+        <p class="p-margin">
+          To overcome this challenge, I've developed a few strategies that help
+          me stay focused and motivated. First, I set clear goals for what I
+          want to achieve in my learning journey. This helps me stay focused and
+          gives me a sense of direction.
+        </p>
+        <p class="p-margin">
+          Second, I make learning a part of my daily routine. Whether it's
+          dedicating a specific time each day to study or incorporating learning
+          into my work tasks, I find that consistency is key to making progress.
+        </p>
+        <p class="p-margin">
+          Finally, I stay accountable by sharing my learning journey with
+          others. Whether it's through this learning journal or by joining
+          online communities, I find that having a support system helps me stay
+          motivated and committed to my goals.
+        </p>
+        <h2>How I got started</h2>
+        <p class="p-margin">
+          I came across Scrimba while I was searching for roadmaps to level up
+          my full-stack development skills. That's when I discovered
+          'roadmap.sh', which led me to Scrimba's Full-Stack Developer Career
+          Path.
+        </p>
+        <p class="p-margin">
+          Intrigued by the curriculum and the interactive learning approach, I
+          decided to enroll in the program. Since then, I've been thoroughly
+          enjoying the learning experience and making steady progress towards my
+          goals.
+        </p>
+        <p class="p-margin">
+          I'm excited to continue this journey and see where it takes me!
+        </p>
       </section>
-      <h3 class="recent-post">Recent Posts</h3>
-
-      <section class="recent-posts content-section">
-        <article>
-          <img src="images/blog-image-01.png" alt="" />
-          <span class="date">September 06, 2025</span>
-          <h2>Blog one</h2>
+      <p class="recent-post">Recent posts</p>
+      <section class="blogs">
+        <div class="blog">
+          <img
+            src="images/blog-image-01.png"
+            alt="blog one"
+            class="blog-imgs"
+          />
+          <span class="date">FEBRUARY 27, 2026</span>
+          <h2>Twimba – A X Feed Clone</h2>
           <p>
-            I'm excited to start a new learning journey as a Scrimba Bootcamp
-            student! After several months of learning in the Frontend Developer
-            Career Path.
+            This is a simple clone of x (twitter) feed which i have made as in
+            my learning journey as a part of scrimba's full stack path
           </p>
-        </article>
-        <article>
-          <img src="images/blog-image-06.png" alt="" />
-          <span class="date">September 06, 2025</span>
-          <h2>Blog two</h2>
+        </div>
+        <div class="blog">
+          <img
+            src="images/blog-image-02.png"
+            alt="blog one"
+            class="blog-imgs"
+          />
+          <span class="date">AUGUST 17, 2025</span>
+          <h2>Oldgram</h2>
           <p>
-            I'm excited to start a new learning journey as a Scrimba Bootcamp
-            student! After several months of learning in the Frontend Developer
-            Career Path.
+            A simple Instagram-like feed built with HTML, CSS, and JavaScript,
+            featuring dynamic post rendering and interactive like functionality.
           </p>
-        </article>
-        <article>
-          <img src="images/blog-image-04.png" alt="" />
-          <span class="date">September 06, 2025</span>
-          <h2>Blog three</h2>
+        </div>
+        <div class="blog">
+          <img
+            src="images/blog-image-03.png"
+            alt="blog one"
+            class="blog-imgs"
+          />
+          <span class="date">AUGUST 24, 2025</span>
+          <h2>Restaurant Ordering App</h2>
           <p>
-            I'm excited to start a new learning journey as a Scrimba Bootcamp
-            student! After several months of learning in the Frontend Developer
-            Career Path.
+            A simple front-end application for ordering food (menu, cart,
+            checkout modal). Built as a DOM + JavaScript modular exercise (ES
+            modules). Suitable for running locally to learn event handling,
+            dynamic HTML rendering, and modal animation.
           </p>
-        </article>
-        <article>
-          <img src="images/blog-image-02.png " alt="" />
-          <span class="date">September 06, 2025</span>
-          <h2>Blog four</h2>
-          <p>
-            I'm excited to start a new learning journey as a Scrimba Bootcamp
-            student! After several months of learning in the Frontend Developer
-            Career Path.
-          </p>
-        </article>
-        <article>
-          <img src="images/blog-image-05.png" alt="" />
-          <span class="date">September 06, 2025</span>
-          <h2>Blog five</h2>
-          <p>
-            I'm excited to start a new learning journey as a Scrimba Bootcamp
-            student! After several months of learning in the Frontend Developer
-            Career Path.
-          </p>
-        </article>
-        <article>
-          <img src="images/blog-image-03.png" alt="" />
-          <span class="date">September 06, 2025</span>
-          <h2>Blog six</h2>
-          <p>
-            I'm excited to start a new learning journey as a Scrimba Bootcamp
-            student! After several months of learning in the Frontend Developer
-            Career Path.
-          </p>
-        </article>
+        </div>
       </section>
     </main>
     <footer>
-      <div class="footer-container">
-        <p>
-          My Learning Journal
-          <span class="copyright">Copyright&copy; 2025</span>
-        </p>
-      </div>
+      <p class="foot">My Learning Journal</p>
+      <p id="copy" class="copy"></p>
+      <p>
+        Find me on <a href="https://github.com/FarelX" class="github">Github</a
+        ><i class="fa-brands fa-github"></i>
+      </p>
     </footer>
     <script src="script.js"></script>
   </body>
