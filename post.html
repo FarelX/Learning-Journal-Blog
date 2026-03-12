@@ -23,12 +23,18 @@
     <header>
       <img src="images/logo.png" alt="logo" class="logo" />
       <a href="/" class="site-title">My learning journal</a>
-      <nav>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav id="nav">
         <ul>
           <li><a href="/">HOME</a></li>
           <li><a href="about.html">ABOUT ME</a></li>
         </ul>
       </nav>
+      <div class="overlay" id="overlay"></div>
     </header>
     <main>
       <section class="hero-post">
@@ -87,49 +93,7 @@
         </p>
       </section>
       <p class="recent-post">Recent posts</p>
-      <section class="blogs">
-        <div class="blog">
-          <img
-            src="images/blog-image-01.png"
-            alt="blog one"
-            class="blog-imgs"
-          />
-          <span class="date">FEBRUARY 27, 2026</span>
-          <h2>Twimba – A X Feed Clone</h2>
-          <p>
-            This is a simple clone of x (twitter) feed which i have made as in
-            my learning journey as a part of scrimba's full stack path
-          </p>
-        </div>
-        <div class="blog">
-          <img
-            src="images/blog-image-02.png"
-            alt="blog one"
-            class="blog-imgs"
-          />
-          <span class="date">AUGUST 17, 2025</span>
-          <h2>Oldgram</h2>
-          <p>
-            A simple Instagram-like feed built with HTML, CSS, and JavaScript,
-            featuring dynamic post rendering and interactive like functionality.
-          </p>
-        </div>
-        <div class="blog">
-          <img
-            src="images/blog-image-03.png"
-            alt="blog one"
-            class="blog-imgs"
-          />
-          <span class="date">AUGUST 24, 2025</span>
-          <h2>Restaurant Ordering App</h2>
-          <p>
-            A simple front-end application for ordering food (menu, cart,
-            checkout modal). Built as a DOM + JavaScript modular exercise (ES
-            modules). Suitable for running locally to learn event handling,
-            dynamic HTML rendering, and modal animation.
-          </p>
-        </div>
-      </section>
+      <section class="blogs" id="recent-blogs"></section>
     </main>
     <footer>
       <p class="foot">My Learning Journal</p>
