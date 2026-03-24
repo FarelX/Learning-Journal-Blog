@@ -19,6 +19,15 @@ const blogPosts = [
   },
   {
     id: 3,
+    title: "Movie Watchlist",
+    date: "March 24, 2026",
+    excerpt:
+      "A movie search web application that allows users to explore films using the OMDb API and build a personal watchlist stored in the browser.",
+    image: "images/image-7.png",
+    link: "https://farelx.github.io/Movie-Watchlist/",
+  },
+  {
+    id: 4,
     title: "Restaurant Ordering App",
     date: "AUGUST 24, 2025",
     excerpt:
@@ -27,7 +36,7 @@ const blogPosts = [
     link: "https://farelx.github.io/restaurant-order-appV2/",
   },
   {
-    id: 4,
+    id: 5,
     title: "Random Password Generator",
     date: "January 15, 2026",
     excerpt:
@@ -36,7 +45,7 @@ const blogPosts = [
     link: "https://farelx.github.io/password-generator/",
   },
   {
-    id: 5,
+    id: 6,
     title: "Metric/Imperial Unit Converter",
     date: "January 02, 2026",
     excerpt:
@@ -45,7 +54,7 @@ const blogPosts = [
     link: "https://farelx.github.io/unit-conversion/",
   },
   {
-    id: 6,
+    id: 7,
     title: "Learning Journal Blog",
     date: "March 09, 2026",
     excerpt:
@@ -78,8 +87,9 @@ document.addEventListener("click", (e) => {
     window.location.href = "post.html";
   }
 });
-function getBlogHtml() {
+function getBlogHtml(limit = blogPosts.length) {
   const blogHtml = blogPosts
+    .slice(0, limit)
     .map((blog) => {
       return `
      <div class="blog" id="${blog.id}">
@@ -98,6 +108,28 @@ function getBlogHtml() {
     })
     .join("");
   return blogHtml;
+}
+
+function getRemainingBlogHtml(startIndex) {
+  return blogPosts
+    .slice(startIndex)
+    .map((blog) => {
+      return `
+     <div class="blog" id="${blog.id}">
+          <a href="${blog.link}">
+            <img src="${blog.image}" alt="blog" class="blog-imgs" />
+            <div class="blog-content">
+              <span class="date">${blog.date}</span>
+              <h2>${blog.title}</h2>
+              <p>
+                ${blog.excerpt}
+              </p>
+            </div>
+          </a>
+        </div>
+    `;
+    })
+    .join("");
 }
 
 function getRecentBlogHtml() {
@@ -125,9 +157,23 @@ function getRecentBlogHtml() {
 function render() {
   const blogsEl = document.getElementById("blogs");
   const recentBlogsEl = document.getElementById("recent-blogs");
+  const viewMoreEl = document.querySelector(".view-more");
+  const maxBlogOnHome = 6;
 
   if (blogsEl) {
-    blogsEl.innerHTML = getBlogHtml();
+    blogsEl.innerHTML = getBlogHtml(maxBlogOnHome);
+
+    if (viewMoreEl) {
+      if (blogPosts.length <= maxBlogOnHome) {
+        viewMoreEl.style.display = "none";
+      } else {
+        viewMoreEl.addEventListener("click", () => {
+          blogsEl.innerHTML += getRemainingBlogHtml(maxBlogOnHome);
+          viewMoreEl.style.display = "none";
+          observeBlogs();
+        });
+      }
+    }
   }
   if (recentBlogsEl) {
     recentBlogsEl.innerHTML = getRecentBlogHtml();
